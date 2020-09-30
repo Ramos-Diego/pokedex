@@ -48,7 +48,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { results } = await res.json()
 
   // Get the paths we want to pre-render based on pokemon list
-  const paths = results.map(({ name }) => ({
+  const paths = results.map(({ name }: any) => ({
     params: { pokemon: name },
   }))
 
@@ -59,7 +59,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // If the route is like /pokemon/pikachu, then params.pokemon is pikachu
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params.pokemon}`)
+  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${params?.pokemon}`)
   const pokemon = JSON.stringify(await res.json())
 
   // Pass pokemon data to the page via props
