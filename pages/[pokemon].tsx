@@ -20,7 +20,7 @@ const pokemon: React.FC<any> = ({ pokemon }) => {
           <Box>
             <Image
               maxH="300px"
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${data.id}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
             />
           </Box>
           <HStack>
