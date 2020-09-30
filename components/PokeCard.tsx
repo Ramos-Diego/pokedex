@@ -21,9 +21,7 @@ const PokeCard: React.FC<PokemonResults> = ({ results }) => {
                   <Image
                     maxH="90px"
                     // Todo: Find a solution that doesn't depend on index
-                    src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${
-                      idx + 1
-                    }.svg`}
+                    src={`/img/${idx + 1}.svg`}
                   ></Image>
                 </Square>
                 <Text fontSize="1.4rem" fontWeight="bold" textAlign="center">

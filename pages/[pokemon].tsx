@@ -14,13 +14,13 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 const pokemon: React.FC<any> = ({ pokemon }) => {
   const data = JSON.parse(pokemon)
   return (
-    <Center h={{ md: '100vh' }}>
+    <Center h='100vh'>
       <Container bgColor="gray.100" borderRadius="lg" py={5}>
         <VStack alignContent="center">
           <Box>
             <Image
               maxH="300px"
-              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${data.id}.svg`}
+              src={`/img/${data.id}.svg`}
             />
           </Box>
           <HStack>
